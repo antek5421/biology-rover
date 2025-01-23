@@ -1,0 +1,9 @@
+../Core/Src/self_test.c:7:6:Test_Init	3
+../Core/Src/self_test.c:25:6:CAN_Configuration	4
+../Core/Src/self_test.c:65:8:CAN_Send_Test	2
+../Core/Src/self_test.c:83:8:CAN_Receive_Test	4
+../Core/Src/self_test.c:102:6:SERVO_Test	5
+../Core/Src/self_test.c:109:6:ToggleDelay	1
+../Core/Src/self_test.c:114:6:LED_Test	1
+../Core/Src/self_test.c:121:6:PUMP_Test	1
+../Core/Src/self_test.c:128:6:ErrorHandler	1
