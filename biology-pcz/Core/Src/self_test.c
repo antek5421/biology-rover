@@ -5,21 +5,10 @@
 #include "types.h"
 
 void Test_Init() {
-    CAN_Configuration();
-    if (CAN_Send_Test() != Status_OK) {
-        ErrorHandler();
-        return;
-    }
-    if (CAN_Receive_Test() != Status_OK) {
-        ErrorHandler();
-        return;
-    }
-
-    PUMP_Test();
     SERVO_Test(&htim1, TIM_CHANNEL_1);
     SERVO_Test(&htim1, TIM_CHANNEL_2);
     SERVO_Test(&htim1, TIM_CHANNEL_3);
-    MX_CAN1_Init();
+    LED_Test();
 }
 
 void CAN_Configuration() {

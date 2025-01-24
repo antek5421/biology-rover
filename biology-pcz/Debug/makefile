@@ -60,8 +60,8 @@ all: main-build
 main-build: biology-pcz.elf secondary-outputs
 
 # Tool invocations
-biology-pcz.elf biology-pcz.map: $(OBJS) $(USER_OBJS) /home/antoniborowski/STM32CubeIDE/workspace_1.17.0/biology-pcz/STM32F427VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "biology-pcz.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/antoniborowski/STM32CubeIDE/workspace_1.17.0/biology-pcz/STM32F427VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="biology-pcz.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+biology-pcz.elf biology-pcz.map: $(OBJS) $(USER_OBJS) /home/antek/biology-rover/biology-pcz/STM32F427VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "biology-pcz.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/antek/biology-rover/biology-pcz/STM32F427VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="biology-pcz.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
