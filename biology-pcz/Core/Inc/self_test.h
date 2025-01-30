@@ -9,14 +9,14 @@
 #define INC_SELF_TEST_H_
 
 #include "types.h"
+#include "tim.h"
 
-void CAN_Test_Init();
-Status CAN_Send_Test();
-Status CAN_Receive_Test();
+void CAN_Test();
 
 void LED_Test();
 
 void SERVO_Test();
+void set_servo_angle(TIM_HandleTypeDef *htim, uint32_t Channel, uint16_t angle);
 
 void PUMP_Test();
 #endif /* INC_SELF_TEST_H_ */
